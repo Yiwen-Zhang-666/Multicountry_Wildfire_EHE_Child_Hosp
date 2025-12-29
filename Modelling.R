@@ -260,7 +260,7 @@ calculate_RERI <- function(RR1, RR2, RR3, se_beta1, se_beta2, se_beta3) {
   a2 <- -RR10     # dRERI/db2
   a3 <-  RR11     # dRERI/db3
   
-  var_RERI <- 
+  var_RERI <-  ### we assuming the effect of each event is independent
     a1^2 * se_beta1^2 +
     a2^2 * se_beta2^2 +
     a3^2 * se_beta3^2
@@ -293,3 +293,4 @@ RERI.dat <- data.frame(
       CI_low = c(results$CI_RERI_low),
       CI_high = c(results$CI_RERI_high)
     )
+
