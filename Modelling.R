@@ -224,7 +224,7 @@ for (i in location.list) {
       # Save results
       ## for pooled RR and 95% CI
       pooled_RR.dat <- data.frame(
-        Exposure = c("EHE alone", "Wildfire alone", "Compound"),
+        Exposure = c("EHE alone", "HFPP alone", "Compound"),
         RR = c(RR_ehe["RR.EHE"], RR_fire["RR.Fire"], RR_compound["RR.Compound"]),
         CI_lower = c(RR_ehe["CI_lower.EHE"], RR_fire["CI_lower.Fire"], RR_compound["CI_lower.Compound"]),
         CI_upper = c(RR_ehe["CI_upper.EHE"], RR_fire["CI_upper.Fire"], RR_compound["CI_upper.Compound"])
@@ -243,4 +243,5 @@ for (i in location.list) {
                                 ifelse(CI_upper < 0, "Antagonism", "No interaction"))
       )
       
+
       
